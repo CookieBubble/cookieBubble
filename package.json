@@ -1,7 +1,7 @@
 {
   "name": "cookiebubble",
   "homepage": "https://cookiebubble.netlify.com",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "gulp": "^3.9.1",
