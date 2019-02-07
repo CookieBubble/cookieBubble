@@ -557,9 +557,6 @@ class sideMenu extends Component {
                     </div>
                     <Signature/>
                 </div>
-                
-                
-
 
                 <Modal
                     className="modal"
