@@ -35,7 +35,7 @@ class App extends Component {
                                 title='Open Source'
                                 description='You’re free to copy, modify and use as commercial.'
                                 buttonText='MIT License'
-                                buttonUrl='https://opensource.org/licenses/mit-license.html'
+                                buttonUrl='https://github.com/CookieBubble/cookieBubble/blob/master/LICENSE'
                                 
                             />
                         </div>
@@ -90,8 +90,8 @@ class App extends Component {
                     <a href="https://www.facebook.com/joaopereirawd" target="_blank">Facebook</a>
                 </div>
                 <div className="others">
-                    <a href="https://github.com/CookieBubble/cookieBubble/blob/master/LICENSE" target="_blank"> MIT License</a>
-                    <a href="https://github.com/CookieBubble/cookieBubble/issues" target="_blank">Feedback</a>
+                    <a href="https://github.com/CookieBubble/react-cookie-bubble/issues" target="_blank">React version feedback</a>
+                    <a href="https://github.com/CookieBubble/jquery-cookie-bubble" target="_blank">Jquery version feedback</a>
                 </div>
             </footer>
       </div>
