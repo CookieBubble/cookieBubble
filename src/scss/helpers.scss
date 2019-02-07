@@ -1,0 +1,75 @@
+.chrome-picker {
+    box-shadow: none !important;
+}
+
+
+.cb-image {
+    svg {
+        width:100%;
+    }
+    &.false {
+        display:none;
+    }
+}
+
+table.table {
+    font-size:18px;
+    border-radius:5px;
+    border-top:none;
+        border: 1px solid #d8e0e5;
+        thead {
+            border:none;
+            background: #e3f0f7;
+                th {
+                    border:none;
+                }
+        }
+}
+//Blurred effect
+body {
+    .morph-container,
+    .tab-section,
+    .section-features,
+    .section-coffee,
+    footer {
+        transition:all .2s;
+    }
+    &.blurred {
+        .morph-container,
+        .tab-section,
+        .section-features,
+        .section-coffee,
+        footer {
+            filter: blur(10px);
+            pointer-events: none;
+        }
+        
+    }
+}
+
+//Color Picker
+.swatch-ball {
+    padding: 5px;
+    border-radius: 50px;
+    background: #fff;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+    display: inline-block;
+    cursor: pointer;
+    float:left;
+}
+
+.popover {
+    position: absolute;
+    z-ndex: 2;
+    padding: 16px;
+    background: #fff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.28);
+    border-radius: 5px;
+        .popover-close-area {
+            position: fixed;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+        }
+}

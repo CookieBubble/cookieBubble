@@ -1,0 +1,29 @@
+//Colors 
+$brand-color:#fda428;
+//font families
+$font1:'Lato';
+$font2:'Oswald';
+
+body {
+	background: #fff; 
+	margin:0px;
+	padding:0px;
+    font-family: sans-serif;
+        &.no-scroll {
+            overflow:hidden;
+        }
+}
+
+h1 {
+    font-size:50px;
+    font-family: $font2;
+    color:#333333;
+}
+
+.App {
+    overflow:hidden;
+}
+
+
+
+

@@ -1,0 +1,31 @@
+.sidebar-panel {
+    position:fixed;
+    z-index:999;
+}
+.sidebar {
+    position:fixed;
+    top:0px;
+    right:0px;
+    width:400px;
+    height:100vh;
+    background:#fff;
+    transform: translateX(120%);
+    box-shadow:-4px 0px 18px rgba(0, 0, 0, 0.08);
+    transition:.9s cubic-bezier(0.19, 1, 0.22, 1);
+    z-index:1;
+        &.active {
+            transform: translateX(0px);
+        }
+        .sidebar-container {
+            position:relative;
+            padding:25px;
+            overflow-y: auto;
+            height: 100%;
+                &.sc-padding-top {
+                    padding-top:250px;
+                }
+                &.sc-padding-bottom {
+                    padding-bottom:250px;
+                }
+        }   
+}

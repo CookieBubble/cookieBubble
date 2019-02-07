@@ -1,0 +1,103 @@
+.cookieBubble {
+  position: fixed;
+  width: 400px;
+  min-height: 100px;
+  bottom: 10px;
+  left: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
+  z-index: 9999; }
+
+.cookieBubble.show {
+  animation-name: popIn;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  animation-fill-mode: forwards; }
+
+.cookieBubble.hide {
+  display: none; }
+
+.cookieBubble .cb-wrapper {
+  position: relative;
+  display: inline-block;
+  padding: 15px; }
+
+.cookieBubble .cb-wrapper .cb-row {
+  position: relative;
+  display: flex;
+  text-align: left; }
+
+.cookieBubble .cb-wrapper .cb-row .cb-message span {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  color: #000;
+  font-size: 18px;
+  margin-top: 0px; }
+
+.cookieBubble .cb-wrapper .cb-row .cb-image {
+  padding-right: 23px; }
+
+.cookieBubble .cb-wrapper .cb-row .cb-image .cookie-inner {
+  fill: #00a4ff; }
+
+.cookieBubble .cb-wrapper .cb-row .cb-image svg {
+  width: 75px; }
+
+.cookieBubble .cb-wrapper .cb-row .gotit-btn {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  color: #fff;
+  background: #00a4ff;
+  padding: 10px  20px;
+  display: inline-block;
+  border-radius: 100px;
+  font-size: 14px;
+  margin-top: 15px;
+  opacity: .95;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600; }
+
+.cookieBubble .cb-wrapper .cb-row .gotit-btn:hover {
+  opacity: 1; }
+
+.cookieBubble .cb-wrapper .cb-row .cookie-policy-btn {
+  margin: 0px;
+  padding: 0px;
+  color: #000;
+  padding: 10px  20px;
+  display: inline-block;
+  border-radius: 100px;
+  font-size: 14px;
+  margin-top: 15px;
+  opacity: .95;
+  border: none;
+  cursor: pointer;
+  font-weight: 400; }
+
+.cookieBubble .cb-wrapper .cb-row .cookie-policy-btn:hover {
+  opacity: 1;
+  text-decoration: underline; }
+
+.cookieBubble .copyright-wrapper {
+  margin-top: 20px; }
+
+.cookieBubble .copyright-wrapper a.copyright {
+  position: absolute;
+  width: 80px;
+  height: 16px;
+  bottom: 8px;
+  right: 7px;
+  margin-top: 30px;
+  background: url("../img/cb_copyright.svg");
+  background-size: cover; }
+
+@keyframes popIn {
+  0% {
+    transform: translateY(120%); }
+  100% {
+    transform: translateY(0px); } }

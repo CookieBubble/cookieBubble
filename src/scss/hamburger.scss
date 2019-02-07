@@ -1,0 +1,132 @@
+$bar-width: 40px;
+$bar-height: 3px;
+$bar-spacing: 10px;
+
+.menu-wrapper {
+	position: fixed;
+  top: 15px;
+  right: 30px;
+  width: 60px;
+	height: 60px;
+	cursor: pointer;
+	background:#fda428;
+	border-radius:50%;
+		.setting-balls{
+			position: absolute;
+			width:100%;
+			height:100%;
+			top:0px;
+			left:0px;
+			transition:all .5;
+			opacity:1;
+				span{
+					&.ball1 {
+						position: absolute;
+						top: 15px;
+						left: 16px;
+						width: 10px;
+						height: 10px;
+						background: #fda428;
+						border-radius: 50%;
+						z-index: 999;
+						box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+						border: 2px solid white;
+						transition:all .5s;
+					}
+					&.ball2 {
+						position: absolute;
+						top: 25px;
+						left: 35px;
+						width: 10px;
+						height: 10px;
+						background: #fda428;
+						border-radius: 50%;
+						z-index: 999;
+						box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+						border: 2px solid white;
+						transition:all .5s;
+					}
+					&.ball3 {
+						position: absolute;
+						top: 35px;
+						left: 18px;
+						width: 10px;
+						height: 10px;
+						background: #fda428;
+						border-radius: 50%;
+						z-index: 999;
+						box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+						border: 2px solid white;
+						transition:all .5s;
+					}
+				}
+		}
+		&.active {
+			.setting-balls {
+				opacity:0;
+			}
+		}
+		&:hover {
+			.setting-balls span.ball1,
+			span.ball3 {
+				left:35px;
+			}
+			.setting-balls span.ball2 {
+				left:18px;
+			}
+		}
+}
+
+.hamburger-menu,
+.hamburger-menu:after,
+.hamburger-menu:before {
+  width: $bar-width;
+	height: $bar-height;
+}
+
+.hamburger-menu {
+	position: relative;
+	transform: translateY($bar-spacing);
+	background: rgba(255, 255, 255, 1);
+	transition: all 0ms 300ms;
+	top: 18px;
+	left: 10px;
+
+  &.animate {
+    background: rgba(255, 255, 255, 0); 
+	}
+	
+	&:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: $bar-spacing;
+		background: rgba(255, 255, 255, 1);
+		transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: $bar-spacing;
+		background: rgba(255, 255, 255, 1);
+		transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+	}
+	&.animate {
+		&:after {
+			top: 0;
+			transform: rotate(45deg);
+			transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+			background:#fff;
+		}
+	}
+	&.animate {
+		&:before {
+			bottom: 0;
+			transform: rotate(-45deg);
+			transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+			background:#fff;
+		}
+	}
+}
+
