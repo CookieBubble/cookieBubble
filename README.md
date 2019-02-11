@@ -24,4 +24,4 @@ The `cookieBubble` library follows [Semantic Versioning](https://semver.org/).
 
 ## License
 This project is licensed under the MIT License,
-read more about this [LICENSE](https://github.com/SAP/fundamental/blob/master/LICENSE).
+read more about this [LICENSE](https://github.com/CookieBubble/cookieBubble/blob/master/LICENSE).
