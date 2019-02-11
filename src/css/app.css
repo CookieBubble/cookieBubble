@@ -1014,11 +1014,9 @@ footer {
   position: relative;
   width: 100%;
   display: inline-block;
-  min-height: 200px;
-  padding: 20px 20px;
+  padding: 50px 0px 100px 0px;
   background: #333333;
-  padding: 50px 0px;
-  padding-bottom: 0px; }
+  padding: 50px 0px 100px 0px; }
 
 footer .copyright {
   position: relative;
@@ -1030,12 +1028,86 @@ footer .copyright {
   font-size: 15px;
   letter-spacing: 1px; }
 
-footer .copyright a {
-  color: #808080;
-  font-family: "Lato"; }
+footer .copyright .popInContainer {
+  position: relative;
+  display: inline-block; }
 
-footer .copyright a:hover {
+footer .copyright .popInContainer span {
+  position: relative;
+  padding: 0px 10px;
+  cursor: pointer; }
+
+footer .copyright .popInContainer span .hrefPopIn {
+  position: absolute;
+  bottom: 31px;
+  background: white;
+  z-index: 99999;
+  width: 250px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0px 9px 20px #00000038;
+  padding: 30px 20px;
+  left: calc(-250px /2 + 92px/2);
+  opacity: 0;
+  transition: ease-in-out .3s;
+  transform: translateY(-10px);
+  visibility: hidden; }
+
+footer .copyright .popInContainer span .hrefPopIn .arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #fff;
+  bottom: -14px;
+  position: absolute;
+  left: 0;
+  left: calc(250px/2 - 15px/2); }
+
+footer .copyright .popInContainer span .hrefPopIn .hrefPopIn-photo {
+  position: relative;
+  width: 100%;
+  display: inline-block; }
+
+footer .copyright .popInContainer span .hrefPopIn .hrefPopIn-photo span {
+  width: 100px;
+  height: 100px;
+  border: 3px solid #dbdbdb;
+  display: inline-block;
+  background-image: url("https://avatars1.githubusercontent.com/u/2126300?s=400&u=25d8a8bf2eaac6b5f6e532d2a1e8a4ad61dc658a&v=4");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  border-radius: 50%; }
+
+footer .copyright .popInContainer span .hrefPopIn .hrefPopIn-name span {
+  font-family: "Lato";
+  color: #3b3b3b;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 10px;
+  font-weight: 600; }
+
+footer .copyright .popInContainer span .hrefPopIn .hrefPopIn-desc {
+  position: relative;
+  width: 100%; }
+
+footer .copyright .popInContainer span .hrefPopIn .hrefPopIn-desc span {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  color: grey; }
+
+footer .copyright .popInContainer span .hrefPopIn .hrefPopIn-desc span a {
+  font-size: 12px; }
+
+footer .copyright .popInContainer span:hover {
   color: #fda428; }
+
+footer .copyright .popInContainer span:hover .hrefPopIn {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px); }
 
 footer .social {
   position: relative;

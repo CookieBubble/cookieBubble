@@ -101,10 +101,10 @@ class tabSection extends Component {
                                         <span className="c_mg">&#60;</span>link
                                         <span className="c_blue"> href</span>
                                         <span className="c_mg">=</span>
-                                        <span className="c_orange">"/node_modules/jquery-cookie-bubble/dist/cookieBubble.min.css"</span>
+                                        <span className="c_orange">"https://unpkg.com/jquery-cookie-bubble@1.0.0/dist/cookieBubble.min.css"</span>
                                         <span className="c_mg">/></span>
                                     </code>
-                                    <Clipboard data-clipboard-text='<link href="/node_modules/jquery-cookie-bubble/dist/cookieBubble.min.css"/>' className="copy-btn"><span></span></Clipboard>
+                                    <Clipboard data-clipboard-text='<link href="https://unpkg.com/jquery-cookie-bubble@1.0.0/dist/cookieBubble.min.css"/>' className="copy-btn"><span></span></Clipboard>
                                 </div>
                             </div>
                         </div>
@@ -117,10 +117,10 @@ class tabSection extends Component {
                                         <span className="c_mg">&#60;</span>script
                                         <span className="c_blue"> src</span>
                                         <span className="c_mg">=</span>
-                                        <span className="c_orange">"/node_modules/jquery-cookie-bubble/dist/cookieBubble.min.js"</span>
+                                        <span className="c_orange">"https://unpkg.com/jquery-cookie-bubble@1.0.0/dist/cookieBubble.min.js"</span>
                                         <span className="c_mg">/></span>
                                     </code>
-                                    <Clipboard data-clipboard-text='<script src="/node_modules/jquery-cookie-bubble/dist/cookieBubble.min.js"/>' className="copy-btn"><span></span></Clipboard>
+                                    <Clipboard data-clipboard-text='<script src="https://unpkg.com/jquery-cookie-bubble@1.0.0/dist/cookieBubble.min.js"/>' className="copy-btn"><span></span></Clipboard>
                                 </div>                            
                             </div>
                         </div>
