@@ -1101,6 +1101,29 @@ footer .copyright .popInContainer span .hrefPopIn .hrefPopIn-desc span {
 footer .copyright .popInContainer span .hrefPopIn .hrefPopIn-desc span a {
   font-size: 12px; }
 
+footer .copyright .popInContainer span .hrefPopIn .hrefPopIn-social {
+  margin: 20px 0px; }
+
+footer .copyright .popInContainer span .hrefPopIn .hrefPopIn-social a {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #eee;
+  margin: 0px 4px;
+  padding: 1px;
+  border-radius: 50%;
+  font-size: 10px;
+  text-align: center;
+  line-height: 26px;
+  text-decoration: none;
+  color: grey; }
+
+footer .copyright .popInContainer span .hrefPopIn .hrefPopIn-social a:hover {
+  background-color: #fda428;
+  color: #fff;
+  border: 1px solid #fff; }
+
 footer .copyright .popInContainer span:hover {
   color: #fda428; }
 
