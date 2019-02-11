@@ -294,7 +294,7 @@ class sideMenu extends Component {
 
             return (
                 <code>
-                    {'<CookieBubble>'}<br></br>
+                    {'<CookieBubble'}<br></br>
                     &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">messageTextColor=</span>'{styles.m_textColor.color}'<br></br>
                     &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">buttonText=</span>'{this.state.buttonText}' <br></br>
                     &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">messageFontSize=</span>'{this.state.rangeInitState}px'<br></br>
