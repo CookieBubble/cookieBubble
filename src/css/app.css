@@ -897,15 +897,22 @@ body.blurred .morph-container, body.blurred .tab-section, body.blurred .section-
     transform: translateY(0px); } }
 
 @media (max-width: 420px) {
-  .cookie-bubble {
+  .cookie-bubble .cb-image {
+    display: none; } }
+
+@media (max-width: 420px) {
+  .cookie-bubble.top-left, .cookie-bubble.top-center, .cookie-bubble.top-right {
+    border-radius: 0px;
+    max-width: inherit;
+    left: 0px !important;
+    top: 0px !important; } }
+
+@media (max-width: 420px) {
+  .cookie-bubble.bottom-left, .cookie-bubble.bottom-center, .cookie-bubble.bottom-right {
     border-radius: 0px;
     max-width: inherit;
     left: 0px !important;
     bottom: 0px !important; } }
-
-@media (max-width: 420px) {
-  .cookie-bubble .cb-image {
-    display: none; } }
 
 .bubbleBox {
   position: fixed;

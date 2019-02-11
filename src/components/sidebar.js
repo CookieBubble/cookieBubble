@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import reactCSS from 'reactcss'
 import { ChromePicker } from 'react-color'
 import Reward from 'react-rewards';
-import Modal from '../components/bubbleBox.js';
+import Modal from './bubbleBox.js';
 
 class sideMenu extends Component {
 
@@ -362,7 +362,7 @@ class sideMenu extends Component {
                                         <div className="fieldset">
                                             <h6>General</h6>
                                             <div className="row">
-                                                <div className="col col-lg-12 new-feature">
+                                                <div className="col-sm-12 col-md-12 col-lg-12 new-feature">
                                                     <div className="form-group">
                                                         <label for="select">Position:</label>
                                                         <select className="form-control" id="select" value={this.state.boxPosition} onChange={this.cb_boxPosition}>
@@ -376,7 +376,7 @@ class sideMenu extends Component {
                                                     </div>
                                                 </div>
 
-                                                <div className="col col-lg-12">
+                                                <div className="col-sm-12 col-md-12 col-lg-12">
                                                     <div className="form-group">
                                                         <label for="select">Icon Visibility:</label>
                                                         <select className="form-control" id="select" value={this.state.isIcon} onChange={this.iconVisibility}>
@@ -386,7 +386,7 @@ class sideMenu extends Component {
                                                     </div>
                                                 </div>
 
-                                                <div className="col col-lg-12">
+                                                <div className="col-sm-12 col-md-12 col-lg-12">
                                                     <div className="form-group">
                                                         <label>Font Size:</label>
                                                         <input className="form-control"
@@ -405,7 +405,7 @@ class sideMenu extends Component {
                                             <h6>Colors</h6>
                                             <div className="row">
                                                 
-                                                <div className="col col-lg-12" style={{ display: this.state.isIcon === 'false' ? 'none' : ''}}>
+                                                <div className="col-sm-12 col-md-12 col-lg-12" style={{ display: this.state.isIcon === 'false' ? 'none' : ''}}>
                                                     <div className="form-group color-group">
 
                                                         <div className="popButton" className="swatch-ball" onClick={this.icon_handleClick}>
@@ -420,7 +420,7 @@ class sideMenu extends Component {
                                                     </div>
                                                 </div>
 
-                                                <div className="col col-lg-12">
+                                                <div className="col-sm-12 col-md-12 col-lg-12">
                                                     <div className="form-group color-group">
                                                         <div className="swatch-ball" onClick={this.button_handleClick}>
                                                             <div style={styles.color} />
@@ -433,7 +433,7 @@ class sideMenu extends Component {
                                                     </div>
                                                 </div>
 
-                                                <div className="col col-lg-12">
+                                                <div className="col-sm-12 col-md-12 col-lg-12">
                                                     <div className="form-group color-group">
                                                         <div className="swatch-ball" onClick={this.message_handleClick}>
                                                             <div style={styles.m_color} />
@@ -457,14 +457,14 @@ class sideMenu extends Component {
 
                                             <div className="row">
 
-                                                <div className="col col-lg-12">
+                                                <div className="col-sm-12 col-md-12 col-lg-12">
                                                     <div className="form-group">
                                                         <label>Message</label>
                                                         <textarea className="form-control" rows="5" value={this.state.messageText} maxlength="145" onChange={this.message_TextHandle}></textarea>
                                                     </div>
                                                 </div>
 
-                                                <div className="col col-lg-12">
+                                                <div className="col-sm-12 col-md-12 col-lg-12">
                                                     <div className="form-group">
                                                         <label>Dismiss button</label>
                                                         <input className="form-control" type="text" maxlength="10" value={this.state.buttonText} onChange={this.button_TextHandle}></input>
@@ -472,7 +472,7 @@ class sideMenu extends Component {
                                                 </div>
 
 
-                                                <div className="col col-lg-12">
+                                                <div className="col-sm-12 col-md-12 col-lg-12">
                                                     <div className="form-group">
                                                         <label>Cookie Policy</label>
                                                         <input className="form-control" type="text" maxlength="22" value={this.state.cookiePolicyText} onChange={this.cookiePolicy_TextHandle}></input>
@@ -488,7 +488,7 @@ class sideMenu extends Component {
                                             <h6>Cookie Policy</h6>
                              
                                             <div className="row">
-                                                <div className="col col-lg-12">
+                                                <div className="col col-sm-12 col-md-12 col-lg-12">
                                                     <div className="form-group">
                                                         <label>URL</label>
                                                         <input className="form-control" type="text" maxlength="22" value={this.state.cookiePolicyUrl} onChange={this.cookiePolicy_urlHandle}></input>
@@ -497,7 +497,7 @@ class sideMenu extends Component {
                                             </div>
 
                                             <div className="row">
-                                                <div className="col col-lg-12">
+                                                <div className="col col-sm-12 col-md-12 col-lg-12">
                                                     <div className="form-group">
                                                         <label for="select">Target:</label>
                                                         <span className="tag">new</span>

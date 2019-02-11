@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './css/app.css';
 import _JSXStyle from 'styled-jsx/style';
 import AppLogo from '../src/img/logo.svg';
-import SideMenu from './components/side-menu';
-import MorphHeader from './components/morph-header';
+import Sidebar from './components/sidebar';
+import HeroShot from './components/heroshot';
 import FeatureIcon from './components/feature-icon';
 import TabSection from './components/tab-section';
 //images
@@ -22,8 +22,8 @@ class App extends Component {
                 <div className="logo">
                     <img src={AppLogo} alt="CookieBubble"></img>
                 </div>
-                <SideMenu/>
-                <MorphHeader/>
+                <Sidebar/>
+                <HeroShot/>
             </section>
             
             <section className="section-features">
