@@ -202,7 +202,7 @@ class sideMenu extends Component {
         this.setState({
             ModalVisibility: false
         });
-        this.liveTry_handleClick()
+        this.setState({ LiveTryButton: false })
     }
 
  
@@ -285,40 +285,10 @@ class sideMenu extends Component {
         }
         
 
-        const ConditionalExportIconJquery = (props) => {
-            return (
-                <div>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">iconColor:</span>'{styles.i_color.background}',<br></br>
-                </div>
-            )
-        }
-        const ConditionalExportIconReact= (props) => {
-            return (
-                <div>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">iconColor=</span>'{styles.i_color.background}'<br></br>
-                </div>
-            )
-        }
-        const ExportForReact = (props) => {
 
-            return (
-                <code>
-                    {'<CookieBubble'}<br></br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">messageTextColor=</span>'{styles.m_textColor.color}'<br></br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">buttonText=</span>'{this.state.buttonText}' <br></br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">messageFontSize=</span>'{this.state.rangeInitState}px'<br></br>
-                    {this.state.isIcon == 'false' ? '' : <ConditionalExportIconReact />}
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">buttonColor=</span>'{styles.buttonColor.background}'<br></br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">iconVisibility=</span>{this.state.isIcon != 'false' ? '{true}' : '{false}'}<br></br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">cookiePolicyButtonText=</span>'{this.state.cookiePolicyText}'<br></br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">cookiePolicyButtonUrl=</span>'{this.state.cookiePolicyUrl}'<br></br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">cookiePolicyButtonTarget=</span>'{this.state.cookiePolicyBlankTarget != 'false' ? '_blank' : '_self'}'<br></br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">boxPosition=</span>'{this.state.boxPosition}'<br></br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">messageText=</span>'{this.state.messageText}'<br></br>
-                    {'/>'}<br></br>
-                </code>
-            );
-        }
+
+    
+ 
 
 
         
@@ -345,6 +315,7 @@ class sideMenu extends Component {
             let last_line;
             let bool_true;
             let bool_false;
+            let comma;
             let ex_type = this.state.exportType;
 
             if (ex_type != 'react'){
@@ -353,12 +324,14 @@ class sideMenu extends Component {
                 division = ':'
                 bool_true = 'true'
                 bool_false = 'false'
+                comma =','
             } else {
                 first_line = '<CookieBubble'
                 last_line = '/>'
                 division = '='
                 bool_true = '{true}'
                 bool_false = '{false}'
+                comma =''
             }
 
 
@@ -367,16 +340,20 @@ class sideMenu extends Component {
                     <div className="code-content">
                         <code>
                             {first_line}<br></br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">messageTextColor{division}</span>'{styles.m_textColor.color}',<br></br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">buttonText{division}</span>'{this.state.buttonText}', <br></br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">messageFontSize{division}</span>'{this.state.rangeInitState}px',<br></br>
-                            {this.state.isIcon == 'false' ? '' : <ConditionalExportIconJquery />}
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">buttonColor{division}</span>'{styles.buttonColor.background}',<br></br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">iconVisibility{division}</span>{this.state.isIcon != 'false' ? bool_true : bool_false},<br></br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">cookiePolicyButtonText{division}</span>'{this.state.cookiePolicyText}',<br></br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">cookiePolicyButtonUrl{division}</span>'{this.state.cookiePolicyUrl}',<br></br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">cookiePolicyButtonTarget{division}</span>'{this.state.cookiePolicyBlankTarget != 'false' ? '_blank' : '_self'}',<br></br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">boxPosition{division}</span>'{this.state.boxPosition}',<br></br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">messageTextColor{division}</span>'{styles.m_textColor.color}'{comma}<br></br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">buttonText{division}</span>'{this.state.buttonText}'{comma} <br></br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">messageFontSize{division}</span>'{this.state.rangeInitState}px'{comma}<br></br>
+                            {this.state.isIcon != 'false' ? (
+                                <div>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">iconColor{division}</span>'{styles.i_color.background}'{comma}<br></br>
+                                </div>
+                            ): ('')}
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">buttonColor{division}</span>'{styles.buttonColor.background}'{comma}<br></br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">iconVisibility{division}</span>{this.state.isIcon != 'false' ? bool_true : bool_false}{comma}<br></br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">cookiePolicyButtonText{division}</span>'{this.state.cookiePolicyText}'{comma}<br></br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">cookiePolicyButtonUrl{division}</span>'{this.state.cookiePolicyUrl}'{comma}<br></br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">cookiePolicyButtonTarget{division}</span>'{this.state.cookiePolicyBlankTarget != 'false' ? '_blank' : '_self'}'{comma}<br></br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">boxPosition{division}</span>'{this.state.boxPosition}'{comma}<br></br>
                             &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">messageText{division}</span>'{this.state.messageText}'<br></br>
                             {last_line}<br></br>
                         </code>
@@ -385,17 +362,17 @@ class sideMenu extends Component {
                     <div className="modal-controllers">
                         <Clipboard data-clipboard-text={`
                             ${first_line}
-                            messageTextColor${division}'${styles.m_textColor.color}', 
-                            buttonText${division}'${this.state.buttonText}', 
-                            messageFontSize${division}'${this.state.rangeInitState}',
-                            iconColor${division}'${styles.i_color.background}',
-                            buttonColor${division}'${styles.buttonColor.background}',
-                            iconVisibility${division}${this.state.isIcon != 'false' ? bool_true : bool_false},
-                            cookiePolicyButtonText${division}'${this.state.cookiePolicyText}',
-                            cookiePolicyButtonUrl${division}'${this.state.cookiePolicyUrl}',
-                            cookiePolicyButtonTarget${division}'${this.state.cookiePolicyBlankTarget != 'false' ? '_blank' : '_self'}',
-                            boxPosition${division}'${this.state.boxPosition}',
-                            messageText${division}'${this.state.messageText}'
+                            messageTextColor${division}'${styles.m_textColor.color}'${comma}
+                            buttonText${division}'${this.state.buttonText}'${comma}
+                            messageFontSize${division}'${this.state.rangeInitState}'${comma}
+                            iconColor${division}'${styles.i_color.background}'${comma}
+                            buttonColor${division}'${styles.buttonColor.background}'${comma}
+                            iconVisibility${division}${this.state.isIcon != 'false' ? bool_true : bool_false}${comma}
+                            cookiePolicyButtonText${division}'${this.state.cookiePolicyText}'${comma}
+                            cookiePolicyButtonUrl${division}'${this.state.cookiePolicyUrl}'${comma}
+                            cookiePolicyButtonTarget${division}'${this.state.cookiePolicyBlankTarget != 'false' ? '_blank' : '_self'}'${comma}
+                            boxPosition${division}'${this.state.boxPosition}'${comma}
+                            messageText${division}'${this.state.messageText}'${comma}
                             ${last_line}`}
                             onSuccess={this.liveTry_handleClick}
                             className="copy-button">
