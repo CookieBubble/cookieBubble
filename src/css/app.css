@@ -949,6 +949,10 @@ body.blurred .morph-container, body.blurred .tab-section, body.blurred .section-
   transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.8s;
   transform: translateY(200px); }
 
+.bubbleBox .bubbleBox-container .code-column {
+  margin: 0px;
+  margin-top: 30px; }
+
 .bubbleBox .bubbleBox-container h2 {
   font-family: "Oswald";
   font-weight: 500;
@@ -1050,6 +1054,13 @@ body.blurred .morph-container, body.blurred .tab-section, body.blurred .section-
   font-family: "Lato";
   letter-spacing: 1px;
   padding-left: 29px; }
+
+@media (max-width: 650px) {
+  .bubbleBox .bubbleBox-container .modal-controllers button.copy-button, .bubbleBox .bubbleBox-container .modal-controllers a.codepen-button, .bubbleBox .bubbleBox-container .modal-controllers a.codesandbox-button {
+    width: 100%;
+    text-align: center;
+    margin-left: 0px;
+    margin-top: 20px; } }
 
 .bubbleBox .bubbleBox-container .close-btn {
   position: absolute;
