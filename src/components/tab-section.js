@@ -55,7 +55,7 @@ class tabSection extends Component {
                         <div className="code-column">
                             <h1>Importing</h1>
                             <div className="code-content">
-                                <code><span className="c_red">@import</span> CookieBubble <span className="c_red">from</span> react-cookie-bubble</code>
+                                <code><span className="c_red">import</span> CookieBubble <span className="c_red">from</span> react-cookie-bubble</code>
                                 <Clipboard data-clipboard-text="@import CookieBubble from react-cookie-bubble" className="copy-btn"><span></span></Clipboard>
                             </div>
                         </div>
