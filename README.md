@@ -5,17 +5,13 @@ Cookie Bubble is the easy and beautiful way to inform users that your website is
 
 Learn more at https://cookiebubble.netlify.com
 
-## Implementations Available?
-- [jQuery](https://github.com/CookieBubble/jquery-cookie-bubble)  ✅
-- [React](https://github.com/CookieBubble/react-cookie-bubble)  ✅
-- [Vue](https://github.com/CookieBubble/vue-cookie-bubble) 🔜
-- [Vanilla](https://github.com/CookieBubble/vanilla-cookie-bubble)  🔜
+## Similar Projects
+- [jQuery implementation of cookieBubble](https://github.com/CookieBubble/jquery-cookie-bubble)  ✅
+- [React implementation of cookieBubble](https://github.com/CookieBubble/react-cookie-bubble)  ✅
+</br>soon:</br>
+- [Vanilla implementation of cookieBubble](https://github.com/CookieBubble/vanilla-cookie-bubble)  🔜
+- [Vue implementation of cookieBubble](https://github.com/CookieBubble/vue-cookie-bubble) 🔜
 
-
-## Current version
-````
-v1.0.0
-````
 
 ## Versioning
 The `cookieBubble` library follows [Semantic Versioning](https://semver.org/).
