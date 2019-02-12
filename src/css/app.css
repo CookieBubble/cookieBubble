@@ -955,6 +955,102 @@ body.blurred .morph-container, body.blurred .tab-section, body.blurred .section-
   font-size: 40px;
   margin: 0px; }
 
+.bubbleBox .bubbleBox-container h6 {
+  font-family: "Lato";
+  font-weight: 600;
+  font-size: 18px;
+  margin: 20px 0px; }
+
+.bubbleBox .bubbleBox-container .modal-controllers button.copy-button {
+  position: relative;
+  padding: 15px 40px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  background: #fda428;
+  margin-top: 30px;
+  cursor: pointer;
+  float: left;
+  line-height: normal; }
+
+.bubbleBox .bubbleBox-container .modal-controllers button.copy-button:before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/clipboard.svg"); }
+
+.bubbleBox .bubbleBox-container .modal-controllers button.copy-button:hover {
+  background: #fd990f; }
+
+.bubbleBox .bubbleBox-container .modal-controllers button.copy-button span {
+  color: #fff;
+  font-family: "Lato";
+  letter-spacing: 1px;
+  padding-left: 25px; }
+
+.bubbleBox .bubbleBox-container .modal-controllers a.codepen-button {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px 40px;
+  background: #1a1a1a;
+  border-radius: 50px;
+  color: #fff;
+  font-family: 'Lato';
+  letter-spacing: 1px;
+  float: left;
+  line-height: normal;
+  margin-top: 30px;
+  margin-left: 10px; }
+
+.bubbleBox .bubbleBox-container .modal-controllers a.codepen-button:before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/codepen.svg"); }
+
+.bubbleBox .bubbleBox-container .modal-controllers a.codepen-button:hover {
+  background: #000; }
+
+.bubbleBox .bubbleBox-container .modal-controllers a.codepen-button span {
+  color: #fff;
+  font-family: "Lato";
+  letter-spacing: 1px;
+  padding-left: 29px; }
+
+.bubbleBox .bubbleBox-container .modal-controllers a.codesandbox-button {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px 40px;
+  background: #40a9f3;
+  border-radius: 50px;
+  color: #fff;
+  font-family: 'Lato';
+  letter-spacing: 1px;
+  float: left;
+  line-height: normal;
+  margin-top: 30px;
+  margin-left: 10px; }
+
+.bubbleBox .bubbleBox-container .modal-controllers a.codesandbox-button:before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/codesandbox.svg"); }
+
+.bubbleBox .bubbleBox-container .modal-controllers a.codesandbox-button:hover {
+  background: #289ef1; }
+
+.bubbleBox .bubbleBox-container .modal-controllers a.codesandbox-button span {
+  color: #fff;
+  font-family: "Lato";
+  letter-spacing: 1px;
+  padding-left: 29px; }
+
 .bubbleBox .bubbleBox-container .close-btn {
   position: absolute;
   top: 0px;

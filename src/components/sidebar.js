@@ -3,12 +3,14 @@ import reactCSS from 'reactcss'
 import { ChromePicker } from 'react-color'
 import Reward from 'react-rewards';
 import Modal from './bubbleBox.js';
+import Clipboard from 'react-clipboard.js';
 
 class sideMenu extends Component {
 
     constructor(props) {
         super(props)
         this.state = { 
+            LiveTryButton:false,
             ModalVisibility: false,
             sideBarOpen: false,
             isIcon:true,
@@ -67,6 +69,7 @@ class sideMenu extends Component {
         this.cookiePolicy_targetHandle = this.cookiePolicy_targetHandle.bind(this);
         this.cb_boxPosition = this.cb_boxPosition.bind(this);
         this.exportSettings = this.exportSettings.bind(this);
+        this.liveTry_handleClick = this.liveTry_handleClick.bind(this);
     }
 
 
@@ -74,7 +77,14 @@ class sideMenu extends Component {
     sideBarToggle = (e) => {
         this.setState({ sideBarOpen: !this.state.sideBarOpen })
     }
-
+    /****************************+
+     *
+     *  Live Try HandleClick
+     *
+     ****************************/
+    liveTry_handleClick = () => {
+        this.setState({ LiveTryButton: !this.state.LiveTryButton })
+    };
     /****************************+
      *
      *  Text Size Range 
@@ -148,7 +158,6 @@ class sideMenu extends Component {
         this.setState({ boxPosition: event.target.value });
     }
 
-
     /****************************+
      *
      *  Cookie Policy
@@ -193,13 +202,13 @@ class sideMenu extends Component {
         this.setState({
             ModalVisibility: false
         });
+        this.liveTry_handleClick()
     }
 
  
 
     render() {
    
-        
         const sidebar_state = this.state.sideBarOpen;
         let body = document.querySelector('body');
         sidebar_state ? body.classList.add("no-scroll", "blurred") : body.classList.remove("blurred", "no-scroll");   
@@ -312,27 +321,94 @@ class sideMenu extends Component {
         }
 
 
-        const ExportForJquery = (props) => {
-
+        
+        const LiveTry = (props) => {
             return (
-                <code>
-                    {'{'}<br></br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">messageTextColor:</span>'{styles.m_textColor.color}',<br></br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">buttonText:</span>'{this.state.buttonText}', <br></br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">messageFontSize:</span>'{this.state.rangeInitState}px',<br></br>
-                    {this.state.isIcon == 'false' ? '' : <ConditionalExportIconJquery />}
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">buttonColor:</span>'{styles.buttonColor.background}',<br></br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">iconVisibility:</span>{this.state.isIcon != 'false' ? 'true' : 'false'},<br></br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">cookiePolicyButtonText:</span>'{this.state.cookiePolicyText}',<br></br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">cookiePolicyButtonUrl:</span>'{this.state.cookiePolicyUrl}',<br></br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">cookiePolicyButtonTarget:</span>'{this.state.cookiePolicyBlankTarget != 'false' ? '_blank' : '_self'}',<br></br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">boxPosition:</span>'{this.state.boxPosition}',<br></br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">messageText:</span>'{this.state.messageText}'<br></br>
-                    {'}'}<br></br>
-                </code>
+                <div>
+                    {this.state.exportType != 'react' ? (
+                        <a href='https://codepen.io/joaopereirawd/pen/pKpYpE' target="_blank" className='codepen-button'>
+                            <span>Try On CodePen</span>
+                        </a>
+                    ) : (
+                        <a href='https://codesandbox.io/s/mqrnlo852y' target="_blank" className='codesandbox-button'>
+                            <span>Try on CodeSandbox</span>
+                        </a>
+                    )}
+                </div>
             );
         }
 
+   
+        const CodeExports = (props) => {
+            let division;
+            let first_line;
+            let last_line;
+            let bool_true;
+            let bool_false;
+            let ex_type = this.state.exportType;
+
+            if (ex_type != 'react'){
+                first_line = '{'
+                last_line = '}'
+                division = ':'
+                bool_true = 'true'
+                bool_false = 'false'
+            } else {
+                first_line = '<CookieBubble'
+                last_line = '/>'
+                division = '='
+                bool_true = '{true}'
+                bool_false = '{false}'
+            }
+
+
+            return (
+                <div>
+                    <div className="code-content">
+                        <code>
+                            {first_line}<br></br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">messageTextColor{division}</span>'{styles.m_textColor.color}',<br></br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">buttonText{division}</span>'{this.state.buttonText}', <br></br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">messageFontSize{division}</span>'{this.state.rangeInitState}px',<br></br>
+                            {this.state.isIcon == 'false' ? '' : <ConditionalExportIconJquery />}
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">buttonColor{division}</span>'{styles.buttonColor.background}',<br></br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">iconVisibility{division}</span>{this.state.isIcon != 'false' ? bool_true : bool_false},<br></br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">cookiePolicyButtonText{division}</span>'{this.state.cookiePolicyText}',<br></br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">cookiePolicyButtonUrl{division}</span>'{this.state.cookiePolicyUrl}',<br></br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">cookiePolicyButtonTarget{division}</span>'{this.state.cookiePolicyBlankTarget != 'false' ? '_blank' : '_self'}',<br></br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">boxPosition{division}</span>'{this.state.boxPosition}',<br></br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span className="c_blue">messageText{division}</span>'{this.state.messageText}'<br></br>
+                            {last_line}<br></br>
+                        </code>
+                    </div>
+
+                    <div className="modal-controllers">
+                        <Clipboard data-clipboard-text={`
+                            ${first_line}
+                            messageTextColor${division}'${styles.m_textColor.color}', 
+                            buttonText${division}'${this.state.buttonText}', 
+                            messageFontSize${division}'${this.state.rangeInitState}',
+                            iconColor${division}'${styles.i_color.background}',
+                            buttonColor${division}'${styles.buttonColor.background}',
+                            iconVisibility${division}${this.state.isIcon != 'false' ? bool_true : bool_false},
+                            cookiePolicyButtonText${division}'${this.state.cookiePolicyText}',
+                            cookiePolicyButtonUrl${division}'${this.state.cookiePolicyUrl}',
+                            cookiePolicyButtonTarget${division}'${this.state.cookiePolicyBlankTarget != 'false' ? '_blank' : '_self'}',
+                            boxPosition${division}'${this.state.boxPosition}',
+                            messageText${division}'${this.state.messageText}'
+                            ${last_line}`}
+                            onSuccess={this.liveTry_handleClick}
+                            className="copy-button">
+                            <span>Copy to clipboard</span>
+                        </Clipboard> 
+                        
+                        {this.state.LiveTryButton ? <LiveTry /> : ''}
+                        
+              
+                    </div>
+                </div>
+            );
+        }
 
         return (
             <div className="sidebar-panel">
@@ -562,31 +638,12 @@ class sideMenu extends Component {
                     className="modal"
                     show={this.state.ModalVisibility}
                     close={this.closeModalHandler}>
-                    <h2>
-                        Your Configuration Is Ready!
-                    </h2>
                     <div className="code-column">
-                        
-                        
-                            {this.state.exportType === 'react' ? (
+                        <div>
                             <div className="code-wrapper">
-                                <div className="code-content">
-                                    <ExportForReact />
-                                </div>
+                                <CodeExports />
                             </div>
-                            ) : (
-                                <div>
-                                    <div className="code-wrapper">
-                                        <div className="code-content">
-                                
-                                            <ExportForJquery />
-                                            {/* <Clipboard data-clipboard-text={`{messageTextColor:'${styles.m_textColor.color}', buttonText:'${this.state.buttonText}', }`} className="copy-btn"><span></span></Clipboard> */}
-
-                                        </div>
-                                    </div>
-                                </div>
-                            )}
-                        
+                        </div>
                     </div>
                 </Modal>
 

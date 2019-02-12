@@ -10,7 +10,6 @@ class tabSection extends Component {
             jqueryDocs: false
         };
 
-        // This binding is necessary to make `this` work in the callback
         this.handleClick = this.handleClick.bind(this);
         this.jQueryDocsHandle = this.jQueryDocsHandle.bind(this);
     }
@@ -35,7 +34,7 @@ class tabSection extends Component {
 
     render() {
         return (
-            <section className="tab-section">
+            <section className={`tab-section react-docs-${this.state.reactDocs} jquery-docs-${this.state.jqueryDocs}`}>
 
                 <div className="filter-controls">
                     <button className={(this.state.reactDocs) ? 'active' : 'desactive'} onClick={this.handleClick}>Usage as React.js</button>
@@ -158,7 +157,7 @@ class tabSection extends Component {
                                 <PropsTable/>
                             </div>
                         </div>
-
+                        
 
                     </div>
                 </section>

@@ -6,6 +6,7 @@ import React from 'react';
      }
  }
 
+const tab_section = document.body.classList.add('react-docs-true');
 
 const footer = (props) => {
 
@@ -42,11 +43,8 @@ const footer = (props) => {
                 <a href="https://github.com/joaopereirawd" target="_blank">Github</a>
                 <a href="https://twitter.com/joaopereirawd" target="_blank">Twitter</a>
                 <a href="https://www.facebook.com/joaopereirawd" target="_blank">Facebook</a>
-            </div>
-            <div className="others">
-                <a href="https://github.com/CookieBubble/react-cookie-bubble/issues" target="_blank">React version feedback</a>
-                <a href="https://github.com/CookieBubble/jquery-cookie-bubble" target="_blank">Jquery version feedback</a>
-            </div> */}
+            </div>*/}
+
         </footer>
     )
 }

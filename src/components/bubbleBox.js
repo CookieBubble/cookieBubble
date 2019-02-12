@@ -9,7 +9,8 @@ const modal = (props) => {
                 <div className="bubbleBox-container">
                     <button className="close-btn" onClick={props.close}><span></span></button>
                     <div>
-                      {props.children}  
+                        <h2>Your Configuration Is Ready!</h2>
+                        {props.children}  
                     </div>
                 </div>
             </div>

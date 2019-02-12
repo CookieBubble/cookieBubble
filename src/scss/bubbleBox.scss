@@ -38,6 +38,105 @@
                     font-size: 40px;
                     margin:0px;
                 }
+                h6 {
+                    font-family:$font1;
+                    font-weight: 600;
+                    font-size: 18px;
+                    margin: 20px 0px;
+                }
+                .modal-controllers {
+                    button.copy-button {
+                        position: relative;
+                        padding: 15px 40px;
+                        border-radius: 50px;
+                        border: none;
+                        outline: none;
+                        background: $brand-color;
+                        margin-top: 30px;
+                        cursor: pointer;
+                        float:left;
+                        line-height:normal;
+                            &:before {
+                                content:'';
+                                position: absolute;
+                                width:20px;
+                                height:20px;
+                                background-image: url('../img/clipboard.svg');
+                            }
+                            &:hover {
+                                background:darken($brand-color, 5%);
+                            }
+                            span {
+                                color:#fff;
+                                font-family: $font1;
+                                letter-spacing:1px;
+                                padding-left: 25px;
+                            }
+                    }
+                    a.codepen-button {
+                        position: relative;
+                        display: inline-block;
+                        text-decoration: none;
+                        padding: 15px 40px;
+                        background:lighten(#000, 10%);
+                        border-radius: 50px;
+                        color: #fff;
+                        font-family: 'Lato';
+                        letter-spacing: 1px;
+                        float:left;
+                        line-height: normal;
+                        margin-top: 30px;
+                        margin-left: 10px;
+                            &:before {
+                                content:'';
+                                position: absolute;
+                                width:20px;
+                                height:20px;
+                                background-image: url('../img/codepen.svg');
+                            }
+                            &:hover {
+                                background:#000;
+                            }
+                            span {
+                                color:#fff;
+                                font-family: $font1;
+                                letter-spacing:1px;
+                                padding-left: 29px;
+                            }
+                    }   
+                    a.codesandbox-button {
+                        position: relative;
+                        display: inline-block;
+                        text-decoration: none;
+                        padding: 15px 40px;
+                        background:#40a9f3;
+                        border-radius: 50px;
+                        color: #fff;
+                        font-family: 'Lato';
+                        letter-spacing: 1px;
+                        float:left;
+                        line-height: normal;
+                        margin-top: 30px;
+                        margin-left: 10px;
+                            &:before {
+                                content:'';
+                                position: absolute;
+                                width:20px;
+                                height:20px;
+                                background-image: url('../img/codesandbox.svg');
+                            }
+                            &:hover {
+                                background:darken(#40a9f3, 5%);
+                            }
+                            span {
+                                color:#fff;
+                                font-family: $font1;
+                                letter-spacing:1px;
+                                padding-left: 29px;
+                            }
+                    }                 
+                }
+
                 .close-btn {
                     position: absolute;
                     top: 0px;
