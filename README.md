@@ -14,7 +14,7 @@ Learn more at https://cookiebubble.netlify.com
 
 
 ## Versioning
-The `cookieBubble` library follows [Semantic Versioning](https://semver.org/).
+The project follows [Semantic Versioning](https://semver.org/).
 `[MAJOR].[MINOR].[PATCH]` 
 
 
