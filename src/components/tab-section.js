@@ -56,7 +56,7 @@ class tabSection extends Component {
                             <h1>Importing</h1>
                             <div className="code-content">
                                 <code><span className="c_red">import</span> CookieBubble <span className="c_red">from</span> react-cookie-bubble</code>
-                                <Clipboard data-clipboard-text="@import CookieBubble from react-cookie-bubble" className="copy-btn"><span></span></Clipboard>
+                                <Clipboard data-clipboard-text="import CookieBubble from react-cookie-bubble" className="copy-btn"><span></span></Clipboard>
                             </div>
                         </div>
 
@@ -146,7 +146,17 @@ class tabSection extends Component {
                                         {'})('}<span className="c_blue">{'jQuery'}</span>{');'}<br></br>
                                     {'</script>'}
                                 </code>
-                                <Clipboard data-clipboard-text='<script>(function($) { $.cookieBubble({ messageText:"My cookie message" });})(jQuery);</script>' className="copy-btn"><span></span></Clipboard>
+                                <Clipboard data-clipboard-text='
+                                    <script>
+                                        (function($) {
+                                            $.cookieBubble(
+                                                { 
+                                                    messageText:"My cookie message",
+                                                    iconVisibility:false
+                                                }
+                                            );
+                                        })(jQuery);
+                                    </script>' className="copy-btn"><span></span></Clipboard>
 
                             </div>
                         </div>
