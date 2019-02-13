@@ -25,15 +25,15 @@ const footer = (props) => {
                                     <span>João Pereira</span>
                                 </div>
                                 <div className="hrefPopIn-desc">
-                                    <span>UI Designer & Developer <a href="">@roffConsulting</a></span>
+                                    <span>UI Designer & Developer</span>
                                 </div>
                                 <div className="hrefPopIn-social">
-                                    <a href="https://github.com/joaopereirawd" target="_blank">GH</a>
-                                    <a href="https://twitter.com/joaopereirawd" target="_blank">T</a>
-                                    <a href="https://www.facebook.com/joaopereirawd" target="_blank">F</a>
+                                    <a href="https://github.com/joaopereirawd" className="gh" target="_blank">GH</a>
+                                    <a href="https://twitter.com/joaopereirawd" className="tw" target="_blank">T</a>
+                                    <a href="https://www.facebook.com/joaopereirawd" className="fb" target="_blank">F</a>
                                 </div>
                             </div>
-                            <div class="arrow-down"></div>
+                            <div className="arrow-down"></div>
                         </div>
                     </span>
 

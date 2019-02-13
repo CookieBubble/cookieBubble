@@ -1142,7 +1142,8 @@ footer .copyright .popInContainer {
 footer .copyright .popInContainer span {
   position: relative;
   padding: 0px 10px;
-  cursor: pointer; }
+  cursor: pointer;
+  text-decoration: underline; }
 
 footer .copyright .popInContainer span .hrefPopIn {
   position: absolute;
@@ -1185,7 +1186,8 @@ footer .copyright .popInContainer span .hrefPopIn .hrefPopIn-photo span {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  border-radius: 50%; }
+  border-radius: 50%;
+  text-decoration: none; }
 
 footer .copyright .popInContainer span .hrefPopIn .hrefPopIn-name span {
   font-family: "Lato";
@@ -1193,7 +1195,8 @@ footer .copyright .popInContainer span .hrefPopIn .hrefPopIn-name span {
   font-size: 14px;
   text-transform: uppercase;
   margin: 10px;
-  font-weight: 600; }
+  font-weight: 600;
+  text-decoration: none; }
 
 footer .copyright .popInContainer span .hrefPopIn .hrefPopIn-desc {
   position: relative;
@@ -1203,7 +1206,8 @@ footer .copyright .popInContainer span .hrefPopIn .hrefPopIn-desc span {
   position: relative;
   width: 100%;
   display: inline-block;
-  color: grey; }
+  color: grey;
+  text-decoration: none; }
 
 footer .copyright .popInContainer span .hrefPopIn .hrefPopIn-desc span a {
   font-size: 12px; }
@@ -1216,7 +1220,6 @@ footer .copyright .popInContainer span .hrefPopIn .hrefPopIn-social a {
   display: inline-block;
   width: 30px;
   height: 30px;
-  border: 1px solid #eee;
   margin: 0px 4px;
   padding: 1px;
   border-radius: 50%;
@@ -1224,15 +1227,28 @@ footer .copyright .popInContainer span .hrefPopIn .hrefPopIn-social a {
   text-align: center;
   line-height: 26px;
   text-decoration: none;
-  color: grey; }
+  opacity: .9; }
 
 footer .copyright .popInContainer span .hrefPopIn .hrefPopIn-social a:hover {
   background-color: #fda428;
   color: #fff;
-  border: 1px solid #fff; }
+  opacity: 1; }
+
+footer .copyright .popInContainer span .hrefPopIn .hrefPopIn-social a.gh {
+  background: #000;
+  color: #fff; }
+
+footer .copyright .popInContainer span .hrefPopIn .hrefPopIn-social a.fb {
+  background: #4065b4;
+  color: #fff; }
+
+footer .copyright .popInContainer span .hrefPopIn .hrefPopIn-social a.tw {
+  background: #039ff5;
+  color: #fff; }
 
 footer .copyright .popInContainer span:hover {
-  color: #fda428; }
+  color: #fda428;
+  text-decoration: none; }
 
 footer .copyright .popInContainer span:hover .hrefPopIn {
   opacity: 1;
