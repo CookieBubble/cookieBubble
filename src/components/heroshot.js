@@ -44,10 +44,6 @@ class morphHeader extends Component {
                         <span>The easy way to inform users that your website is using cookies. </span>
                     </h1>
                     <button className="btn-custom" onClick={() => document.querySelector('.menu-wrapper').click() }>Customize now</button>
-                    <AdSense.Google
-                        client='ca-pub-3361505348838569'
-                        slot='7806394673'
-                    />
                 </div>
                 <svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1364 600">
                     <style jsx>{`
