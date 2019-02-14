@@ -4,7 +4,7 @@ class carbonAds extends Component {
     constructor(props) {
         super(props)
         this.state = { 
-            carbonWrapper:this.props.carbonWrapper,
+            customClass: this.props.customClass,
             carbonUrl: this.props.carbonUrl,
             aSync:true
         };
@@ -21,7 +21,7 @@ class carbonAds extends Component {
 
     render() {
         return (
-            <div className={this.state.carbonWrapper ? this.state.carbonWrapper : 'carbon-adds-wrapper'}></div>
+            <div className={`carbon-adds-wrapper ${this.state.customClass}`}></div>
         );
     }
 }
