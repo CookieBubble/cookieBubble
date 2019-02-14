@@ -1295,6 +1295,9 @@ footer .others a {
   letter-spacing: 1px;
   font-weight: 500; }
 
+.carbon-adds-wrapper {
+  margin: 40px 0px; }
+
 #carbonads {
   --width: 300px;
   --font-size: 14px; }
