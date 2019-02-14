@@ -26,7 +26,7 @@ class morphHeader extends Component {
         }
 
         morph_function_calc();
-        
+
         window.addEventListener("resize", function () {
             morph_function_calc();
         });
