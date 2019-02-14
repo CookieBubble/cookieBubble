@@ -8,7 +8,6 @@
     "gulp-sass": "^4.0.2",
     "gulp-watch": "^5.0.1",
     "react": "^16.7.0",
-    "react-adsense": "^0.0.6",
     "react-clipboard.js": "^2.0.2",
     "react-color": "^2.14.1",
     "react-dom": "^16.7.0",
