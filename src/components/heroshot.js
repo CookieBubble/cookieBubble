@@ -29,6 +29,18 @@ class morphHeader extends Component {
         window.addEventListener("resize", function () {
             morph_function_calc();
         });
+
+
+            let carbon_wrapper = document.querySelector('.carbon-add');
+
+            const script = document.createElement("script");
+
+            script.src = "//cdn.carbonads.com/carbon.js?serve=CK7DLK3E&placement=joaopereirawdgithubio";
+            script.async = true;
+            script.id =  "_carbonads_js"
+
+            carbon_wrapper.appendChild(script);
+            
         
     }
 
@@ -44,6 +56,7 @@ class morphHeader extends Component {
                         <span>The easy way to inform users that your website is using cookies. </span>
                     </h1>
                     <button className="btn-custom" onClick={() => document.querySelector('.menu-wrapper').click() }>Customize now</button>
+                    <div class="carbon-add"></div>
                     <AdSense.Google
                         client='ca-pub-3361505348838569'
                         slot='7806394673'
