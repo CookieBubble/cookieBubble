@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CarbonAds from '../components/react-carbon-ads';
 
 class morphHeader extends Component {
     constructor(props) {
@@ -25,20 +26,12 @@ class morphHeader extends Component {
         }
 
         morph_function_calc();
+        
         window.addEventListener("resize", function () {
             morph_function_calc();
         });
 
 
-            const carbon_wrapper = document.querySelector('.carbon-adds-wrapper');
-            const script = document.createElement("script");
-            script.src = "//cdn.carbonads.com/carbon.js?serve=CK7DLK3E&placement=joaopereirawdgithubio";
-            script.async = true;
-            script.id =  "_carbonads_js"
-
-            carbon_wrapper.appendChild(script);
-            
-        
     }
 
     ToggleClass = (e) => {
@@ -53,7 +46,7 @@ class morphHeader extends Component {
                         <span>The easy way to inform users that your website is using cookies. </span>
                     </h1>
                     <button className="btn-custom" onClick={() => document.querySelector('.menu-wrapper').click() }>Customize now</button>
-                    <div class="carbon-adds-wrapper"></div>
+                    <CarbonAds carbonUrl={'//cdn.carbonads.com/carbon.js?serve=CK7DLK3E&placement=joaopereirawdgithubio'}/>
                 </div>
                 <svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1364 600">
                     <style jsx>{`
