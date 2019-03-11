@@ -684,6 +684,10 @@ input[type=range]:focus::-ms-fill-upper {
   transition: 0.9s cubic-bezier(0.19, 1, 0.22, 1);
   z-index: 1; }
 
+@media (max-width: 680px) {
+  .sidebar {
+    width: 100%; } }
+
 .sidebar.active {
   transform: translateX(0px); }
 
