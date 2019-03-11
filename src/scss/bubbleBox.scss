@@ -9,6 +9,7 @@
     z-index:999999999;
     opacity:0;
     visibility: hidden;
+    overflow-y: auto;
         .overlay {
             position:fixed;
             width:100%;
@@ -32,6 +33,9 @@
             opacity:0;
             transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) .8s;
             transform: translateY(200px);
+                @media (max-width:968px) {
+                    padding:20px;
+                }
                 .code-column {
                     margin:0px;
                     margin-top:30px;
@@ -199,6 +203,9 @@
                 .bubbleBox-container {
                     opacity:1;
                     transform: translateY(100px);
+                        @media (max-width:968px) {
+                            transform: translateY(25px);
+                        }
                 }   
         }
         &.desactive {

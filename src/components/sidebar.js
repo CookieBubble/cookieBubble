@@ -400,10 +400,11 @@ class sideMenu extends Component {
                         <div className={`hamburger-menu ${(this.state.sideBarOpen) ? 'animate' : 'desactive'}`} onClick={this.sideBarToggle}></div>	  
                     </div>
                 </div>
-                <div className={`sidebar ${(this.state.sideBarOpen) ? 'active' : 'desactive'}`}  >
+                <div className={`sidebar ${this.state.boxPosition} ${(this.state.sideBarOpen) ? 'active' : 'desactive'}`}  >
                     <div className={
                             `sidebar-container ${
-                                    this.state.boxPosition === 'bottom-right' ? 'sc-padding-bottom' : this.state.boxPosition === 'top-right' ? 'sc-padding-top' : ''
+                                    this.state.boxPosition === 'top-center' ? 'sc-padding-top' : ''
+                                    //this.state.boxPosition === 'bottom-right' ? 'sc-padding-bottom' : this.state.boxPosition === 'top-right' ? 'sc-padding-top' : ''
                                 }`
                         }>
                         <h1>Settings</h1>
